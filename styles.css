@@ -1,0 +1,201 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style for header */
+/* Style for header */
+.header {
+  background-color: #FFDF00;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  padding: 20px 0;
+}
+
+header .container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Hover effect for navigation links */
+.nav ul li a:hover {
+  color: #555;
+}
+
+
+/* Main content and sidebar styles */
+.main-content {
+  background-color: #FFFFE0;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-content .container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  width: 65%; /* Mengurangi lebar konten untuk memberikan lebih banyak ruang pada sidebar */
+  margin-right: 5%; /* Menambahkan margin ke sidebar */
+}
+
+.content article {
+  margin-bottom: 30px;
+}
+
+.content article h3 {
+  font-size: 26px; /* Menambah ukuran font untuk judul konten */
+  margin-bottom: 20px; /* Mengurangi margin bawah untuk mengecilkan jarak antar elemen */
+
+}
+
+.content article h4 {
+  font-size: 22px; /* Menambah ukuran font untuk subjudul konten */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.content article p {
+  font-size: 18px; /* Menambah ukuran font untuk teks konten */
+  line-height: 1.6;
+  margin-bottom: 20px; /* Mengurangi margin bawah untuk teks konten */
+
+}
+
+/* Sidebar */
+.sidebar {
+  width: 30%;
+  background-color: #FFEEAD; /* Meringankan warna sidebar */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.sidebar h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.sidebar p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+.footer {
+  background-color: #FFE066; /* Warna kuning untuk footer */
+  color: #333; /* Warna teks kontras */
+  padding: 20px 0;
+  text-align: center; /* Teks rata tengah */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+/* Gaya untuk tampilan perangkat seluler */
+@media screen and (max-width: 768px) {
+  /* Mengatur gaya untuk layar dengan lebar maksimum 768px (misalnya untuk smartphone) */
+  .sidebar {
+    display: none; /* Menyembunyikan sidebar pada layar dengan lebar maksimum 768px */
+  }
+
+  .content {
+    width: 100%; /* Mengisi lebar konten penuh pada layar kecil */
+  }
+
+  /* Navigasi untuk layar seluler */
+  .nav-links {
+    display: none; /* Sembunyikan tautan navigasi */
+    position: absolute;
+    top: 60px; /* Sesuaikan posisi navigasi */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  .menu-toggle.active + .nav-links {
+    display: block; /* Tampilkan tautan navigasi saat tombol hamburger diaktifkan */
+  }
+  .menu-toggle {
+    display: block; /* Tampilkan tombol hamburger */
+    cursor: pointer; /* Ubah kursor menjadi pointer saat dihover */
+  }
+
+  .menu-toggle .hamburger {
+    width: 25px; /* Atur lebar garis hamburger */
+    height: 3px; /* Atur tinggi garis hamburger */
+    background-color: #333;
+    margin: 5px 0; /* Beri ruang antara garis hamburger */
+    transition: transform 0.4s ease-in-out; /* Animasi transformasi garis hamburger */
+  }
+
+  /* Animasi perubahan icon menjadi X pada saat di-click */
+  .menu-toggle.active .hamburger {
+    transform: rotate(45deg); /* Ubah garis pertama */
+  }
+
+  .menu-toggle.active .hamburger:before,
+  .menu-toggle.active .hamburger:after {
+    transform: rotate(-90deg); /* Ubah garis kedua dan ketiga */
+  }
+
+  .nav-links.active {
+    display: block; /* Menampilkan tautan navigasi */
+    text-align: center; /* Pusatkan tautan navigasi */
+  }
+
+  .nav-links.active li {
+    display: block; /* Ubah tautan navigasi menjadi blok */
+    margin: 10px 0; /* Beri ruang antara setiap tautan */
+  }
+
+  .nav-links.active a {
+    display: inline-block;
+    padding: 8px 16px; /* Atur padding tombol navigasi */
+    border-radius: 4px; /* Tambahkan sudut tombol */
+    background-color: #FFDF00; /* Warna latar belakang tombol */
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  /* Hover effect untuk tombol navigasi */
+  .nav-links.active a:hover {
+    background-color: #FFFF00; /* Ubah warna latar belakang saat dihover */
+  }
+}

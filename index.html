@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Header</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header section -->
+<header class="header">
+    <div class="container">
+      <h1 class="logo">YourLogo</h1>
+      <nav class="nav">
+        <div class="menu-toggle">
+          <div class="hamburger"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+          <!-- Tautan navigasi tetap ada di sini -->
+          <!-- ... -->
+        </ul>
+      </nav>
+    </div>
+</header>
+
+<!-- Main content section -->
+<div class="main-content">
+  <div class="container">
+    <section class="content">
+      <h2>Welcome to Our Website</h2>
+      <article>
+        <h3>Benefits of Tomatoes</h3>
+        <p>Tomatoes are a highly nutritious fruit that offers a range of health benefits. Some of the key benefits include:</p>
+        
+        <!-- List of benefits -->
+        <h4>1. Rich Source of Nutrients</h4>
+        <p>Tomatoes are packed with essential vitamins and minerals such as vitamin C, potassium, folate, and vitamin K.</p>
+        
+        <h4>2. Antioxidant Properties</h4>
+        <p>They contain antioxidants like lycopene, which helps in protecting cells from damage and may reduce the risk of certain chronic diseases.</p>
+        
+        <h4>3. Heart Health</h4>
+        <p>The nutrients in tomatoes support heart health by aiding in the regulation of cholesterol levels and reducing the risk of heart-related ailments.</p>
+        
+        <h4>4. Skin Health</h4>
+        <p>Lycopene in tomatoes may contribute to protecting the skin from sun damage and help maintain skin health.</p>
+        
+        <h4>5. Improved Vision</h4>
+        <p>Tomatoes contain vitamin A and other compounds that are beneficial for maintaining good vision and eye health.</p>
+        
+        <!-- Conclusion -->
+        <p>These are just a few among the numerous benefits that tomatoes offer. Including tomatoes in your diet can be a great way to enhance overall health.</p>
+      </article>
+    </section>
+    
+    <!-- Sidebar section -->
+    <aside class="sidebar">
+      <h3>Sidebar</h3>
+      <p>Some content for the sidebar goes here. You can add various widgets, links, or additional information.</p>
+    </aside>
+  </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2023 YourWebsite. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+  document.querySelector('.hamburger').classList.toggle('active'); // Tambah atau hapus kelas 'active'
+  document.querySelector('.nav-links').classList.toggle('active'); // Tambah atau hapus kelas 'active' pada tautan navigasi
+});
+
+
+</script>
+
+</body>
+</html>
